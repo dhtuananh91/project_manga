@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Catalog View Controller-->
+        <scene sceneID="fwO-Zn-Yyp">
+            <objects>
+                <tableViewController id="dfE-2p-duj" customClass="ADCatalogViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="265" sectionHeaderHeight="28" sectionFooterHeight="28" id="z4E-fw-81V">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Catalog" rowHeight="265" id="J13-UR-NI7" customClass="ADCatalogCell">
+                                <rect key="frame" x="0.0" y="28" width="600" height="265"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J13-UR-NI7" id="Qn7-F2-ez6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="264"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bt3325-one_piece_599_sunny_by_natalya_ru-d30c1ah.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Eou-IM-d4e">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="8" width="140" height="200"/>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKY-aQ-g7F">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="216" width="140" height="24"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIj-R0-iad">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="8" y="239" width="140" height="21"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="Eou-IM-d4e"/>
+                                            <exclude reference="NKY-aQ-g7F"/>
+                                            <exclude reference="yIj-R0-iad"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="subviews">
+                                            <include reference="Eou-IM-d4e"/>
+                                            <include reference="NKY-aQ-g7F"/>
+                                            <include reference="yIj-R0-iad"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mangaImage" destination="Eou-IM-d4e" id="RBb-dv-zMj"/>
+                                    <outlet property="mangaSub" destination="yIj-R0-iad" id="jku-P4-I1f"/>
+                                    <outlet property="mangaTitle" destination="NKY-aQ-g7F" id="OMc-gW-5ZC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dfE-2p-duj" id="Yfx-nw-OKD"/>
+                            <outlet property="delegate" destination="dfE-2p-duj" id="NZe-3i-t8t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="k6W-Wv-nuz">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sources" id="Txz-ev-qti">
+                            <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="D0R-tV-zS6">
+                            <rect key="frame" x="140" y="8" width="320" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Featured"/>
+                                <segment title="All"/>
+                                <segment title="Latest"/>
+                            </segments>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="8" y="6" width="384" height="29"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="8" y="6" width="384" height="29"/>
+                            </variation>
+                        </segmentedControl>
+                        <rightBarButtonItems>
+                            <barButtonItem image="ROFCatalogSearchButton-Normal.png" id="SMg-2O-NA9">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
+                                <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="ROFCatalogFilterButton-Normal.png" id="DFm-Ce-jge">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-24" maxY="0.0"/>
+                                <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4D-Zz-5q3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314.5" y="-411"/>
+        </scene>
+        <!--Catalog View Controller-->
+        <scene sceneID="fLV-yM-D4G">
+            <objects>
+                <collectionViewController id="u30-IV-X1C" customClass="ADCatalogViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hQr-Lr-yBF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="nh5-LR-oT2">
+                            <size key="itemSize" width="145" height="242"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Catalog" id="KiM-H5-a3p" customClass="ADCatalogViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="242"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bt3325-one_piece_599_sunny_by_natalya_ru-d30c1ah.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mwx-0k-dET">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="3" y="0.0" width="145" height="200"/>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Piece Anh Dang Anh" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm2-NG-Snk">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="4" y="200" width="137" height="21"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eiichiro Oda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNV-yk-hkZ">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                                <rect key="frame" x="4" y="221" width="137" height="21"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <size key="customSize" width="145" height="242"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="mwx-0k-dET"/>
+                                        <exclude reference="Vm2-NG-Snk"/>
+                                        <exclude reference="aNV-yk-hkZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="mwx-0k-dET"/>
+                                        <include reference="Vm2-NG-Snk"/>
+                                        <include reference="aNV-yk-hkZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="mangaImage" destination="mwx-0k-dET" id="qp2-r6-oG2"/>
+                                    <outlet property="mangaSub" destination="aNV-yk-hkZ" id="7B7-Em-32Z"/>
+                                    <outlet property="mangaTitle" destination="Vm2-NG-Snk" id="JVh-ao-l5g"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="u30-IV-X1C" id="y7g-q5-qEW"/>
+                            <outlet property="delegate" destination="u30-IV-X1C" id="WX0-LM-hj3"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="xza-eT-M0c">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sources" id="mOx-40-yoN">
+                            <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="PCj-5g-724">
+                            <rect key="frame" x="140" y="8" width="320" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Featured"/>
+                                <segment title="All"/>
+                                <segment title="Latest"/>
+                            </segments>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="8" y="6" width="384" height="29"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="8" y="6" width="384" height="29"/>
+                            </variation>
+                        </segmentedControl>
+                        <rightBarButtonItems>
+                            <barButtonItem image="ROFCatalogSearchButton-Normal.png" id="zQL-LQ-fn2">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
+                                <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="ROFCatalogFilterButton-Normal.png" id="g24-at-IzJ">
+                                <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-24" maxY="0.0"/>
+                                <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3er-zd-zVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-1161"/>
+        </scene>
+        <!--Catalog-->
+        <scene sceneID="Vzx-pv-pAx">
+            <objects>
+                <navigationController id="Ays-rJ-D7H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Catalog" image="ROFMainTabBarIconCatalog-Normal.png" selectedImage="ROFMainTabBarIconCatalog-Selected.png" id="58t-Q2-YnM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="z5p-nB-aZG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="u30-IV-X1C" kind="relationship" relationship="rootViewController" id="kO8-BK-hsE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="md8-WC-Z8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849.75" y="-1161"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.10196078431372549" green="0.47058823529411764" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ays-rJ-D7H" kind="relationship" relationship="viewControllers" id="jxJ-tD-xOi"/>
+                        <segue destination="4rd-qy-QvH" kind="relationship" relationship="viewControllers" id="dx1-pu-Opv"/>
+                        <segue destination="LUk-XM-gpW" kind="relationship" relationship="viewControllers" id="7Fx-yC-J4c"/>
+                        <segue destination="j4y-ti-gMk" kind="relationship" relationship="viewControllers" id="AY7-35-Apf"/>
+                        <segue destination="cTk-9C-XoT" kind="relationship" relationship="viewControllers" id="uHa-XB-FJ0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="vSM-kb-ya4">
+            <objects>
+                <viewController id="4rd-qy-QvH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tFb-q0-Be6"/>
+                        <viewControllerLayoutGuide type="bottom" id="JL1-at-6HK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jD0-Jr-6tt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="4AW-XI-PgJ">
+                                <rect key="frame" x="186" y="262" width="227" height="29"/>
+                                <segments>
+                                    <segment title="Featured"/>
+                                    <segment title="All"/>
+                                    <segment title="Latest"/>
+                                </segments>
+                                <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="ROFMainTabBarIconFavorites-Normal.png" selectedImage="ROFMainTabBarIconFavorites-Selected.png" id="XhS-54-Y4W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gp-B4-5HM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="-378"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="hv9-w1-9th">
+            <objects>
+                <viewController id="cTk-9C-XoT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0tP-cI-pvS"/>
+                        <viewControllerLayoutGuide type="bottom" id="vgc-Cj-3Mc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N7z-yH-kzT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="ROFMainTabBarIconSettings-Normal.png" selectedImage="ROFMainTabBarIconSettings-Selected.png" id="2Jx-6T-DOp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY3-xH-4O8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="1142"/>
+        </scene>
+        <!--Downloads-->
+        <scene sceneID="eEZ-Ir-bKg">
+            <objects>
+                <viewController id="j4y-ti-gMk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wMg-UQ-fnI"/>
+                        <viewControllerLayoutGuide type="bottom" id="esG-UN-iIh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9hI-gf-lbW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Downloads" image="ROFMainTabBarIconDownloads-Normal.png" selectedImage="ROFMainTabBarIconDownloads-Selected.png" id="Yt9-HP-xaO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ttd-TG-Dn7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="1142"/>
+        </scene>
+        <!--Recent-->
+        <scene sceneID="74F-12-VHY">
+            <objects>
+                <viewController id="LUk-XM-gpW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qa8-Xt-ayG"/>
+                        <viewControllerLayoutGuide type="bottom" id="okZ-aT-taU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eve-OL-wkP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recent" image="ROFMainTabBarIconRecent-Normal.png" selectedImage="ROFMainTabBarIconRecent-Selected.png" id="1m5-eo-3sZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mh7-he-R4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="294"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ROFCatalogFilterButton-Normal.png" width="24" height="24"/>
+        <image name="ROFCatalogSearchButton-Normal.png" width="24" height="24"/>
+        <image name="ROFMainTabBarIconCatalog-Normal.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconCatalog-Selected.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconDownloads-Normal.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconDownloads-Selected.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconFavorites-Normal.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconFavorites-Selected.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconRecent-Normal.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconRecent-Selected.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconSettings-Normal.png" width="28" height="28"/>
+        <image name="ROFMainTabBarIconSettings-Selected.png" width="28" height="28"/>
+        <image name="bt3325-one_piece_599_sunny_by_natalya_ru-d30c1ah.jpg" width="610" height="885"/>
+    </resources>
+    <color key="tintColor" red="0.1019607843" green="0.47058823529999999" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+</document>
